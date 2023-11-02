@@ -13,7 +13,7 @@ function showTongue() {
     tongueCat.classList.remove('hidden');
     isTongueVisible = true;
 
-    let randomTime = 100 + Math.random() * 400;  // Random time between 0.1 to 0.5 seconds
+    let randomTime = 300 + Math.random() * 200;  // Random time between 0.3 to 0.5 seconds
     setTimeout(() => {
         if (isTongueVisible) {
             resetCats();
