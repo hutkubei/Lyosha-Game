@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Cat's Tongue</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #game {
+            width: 80vmin;  /* This will make it responsive */
+            height: 80vmin;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+        .cat {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+        }
+        .hidden {
+            opacity: 0;
+        }
+        #score {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="score">pup! 0</div>
+    <div id="game">
+        <div class="cat" id="normal" style="background-image: url('images/normal_cat.jpg');"></div>
+        <div class="cat hidden" id="tongue" style="background-image: url('images/tongue_cat.jpg');"></div>
+        <div class="cat hidden" id="happy" style="background-image: url('images/happy_cat.jpg');"></div>
+        <div class="cat hidden" id="angry" style="background-image: url('images/angry_cat.jpg');"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
